@@ -11,6 +11,6 @@ check_varnish_LDADD = ${VARNISHAPI_LIBS}
 EXTRA_DIST = LICENSE autogen.sh
 
 ## an additional phony target:
-.PHONY: build
-build:
+.PHONY: pkg
+pkg:
     -fpm -s dir -t deb -n nagios-plugin-varnish -v ${VERSION} check_varnish=/usr/lib/nagios/plugins/check_varnish
